@@ -39,6 +39,13 @@ body{
     gap: 48px;
 }
 
+@media (max-width: 900px) {
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .fact-form{
 
     background-color: #44403c;
@@ -93,8 +100,8 @@ h1{
 }
 
 .fact{
-    line-height: 1.4;
     font-size: 20px;
+    line-height: 1.4;
     background-color: #44403c;
     margin-bottom: 16px;
     padding: 16px 24px;
@@ -106,15 +113,23 @@ h1{
     gap: 24px;
 }
 
+@media (max-width: 1200px) {
+    .fact{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+    }
+}
+
 ul{
     list-style: none;
 }
 
-.vote-buttons{
+/* .vote-buttons{
  
-    margin: auto;
+    margin-left: auto;
 
-}
+} */
 
 .tag{
     text-transform: uppercase;
@@ -145,7 +160,7 @@ ul{
 .vote-buttons{
     display: flex;
     gap: 8px;
-    margin: auto;
+    margin-left: auto;
     flex-shrink: 0;
 }
 
@@ -197,4 +212,24 @@ ul{
 .source:active{
 
     color: #3b82f6;        
+}
+
+@media (max-width: 1050px){
+    body{
+        padding: 32px 48px;
+    }
+    .fact-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .fact-form input,
+    .fact-form select {
+        width: auto;
+    }
+}
+
+/* For JS */
+
+.hidden{
+    display: none !important;
 }
